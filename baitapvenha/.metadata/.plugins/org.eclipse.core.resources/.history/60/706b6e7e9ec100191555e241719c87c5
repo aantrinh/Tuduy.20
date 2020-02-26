@@ -1,0 +1,16 @@
+package luyentapOOP;
+
+import java.util.Scanner;
+
+public class demoRun {
+
+	public static void main(String[] args) {
+		HinhChuNhat hcn = new HinhChuNhat();
+		Scanner scan = new Scanner(System.in);
+		hcn.nhap(scan);
+		hcn.tinhChuVi();
+		hcn.tinhDienTich();
+		hcn.xuat();
+	}
+
+}

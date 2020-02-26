@@ -1,0 +1,75 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class CongTy {
+	private String tenCty;
+	private String maSoThue;
+	private float doanhThuThang;
+	private ArrayList<NhanSu> dsnv;
+
+	// get, set
+	public String getTenCty() {
+		return tenCty;
+	}
+
+	public void setTenCty(String tenCty) {
+		this.tenCty = tenCty;
+	}
+
+	public String getMaSoThue() {
+		return maSoThue;
+	}
+
+	public void setMaSoThue(String maSoThue) {
+		this.maSoThue = maSoThue;
+	}
+
+	public ArrayList<NhanSu> getDsnv() {
+		return dsnv;
+	}
+
+	public void setDsnv(ArrayList<NhanSu> dsnv) {
+		this.dsnv = dsnv;
+	}
+
+	public float getDoanhThuThang() {
+		return doanhThuThang;
+	}
+
+	public CongTy() {
+		this.dsnv = new ArrayList<NhanSu>();
+	}
+
+	public void nhapNhanVien(Scanner scan) {
+		int dangNhap =0;
+		do {
+		System.out.println(" Mời chọn loại nhân sự");
+		System.out.println(" 1. Nhân viên");
+		System.out.println(" 2. Trưởng phòng");
+		System.out.println(" 3. Giám đốc");
+		System.out.println(" 0. Thoát chương trình");
+		System.out.print(" MỜI CHỌN SỐ >>>>>>>>>>");
+		dangNhap = Integer.parseInt(scan.nextLine());
+		switch (dangNhap) {
+		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 0:
+			break;
+		default: 
+			System.out.println(" Chọn 1,2,3 hoặc 0 để thực hiện chương trình");
+			break;
+		}
+		} while (dangNhap !=0);
+	}
+
+	public void nhapThongTin(Scanner scan) {
+		System.out.println(" Mời nhập tên công ty");
+		this.tenCty = scan.nextLine();
+		System.out.println(" Mời nhập mã số thuế");
+		this.maSoThue = scan.nextLine();
+	}
+}

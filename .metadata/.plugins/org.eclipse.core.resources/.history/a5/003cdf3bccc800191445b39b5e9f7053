@@ -1,0 +1,18 @@
+
+public class TruongPhong extends NhanSu {
+	// thuộc tính
+	protected int soLuongNV;
+	// hằng số
+	public final int LUONG_NGAY = 200;
+	// get, set
+	public int getSoLuongNV() {
+		return soLuongNV;
+	}
+	public void setSoLuongNV(int soLuongNV) {
+		this.soLuongNV = soLuongNV;
+	}
+	// khởi tạo
+	public TruongPhong() {
+		this.soLuongNV() = 0;
+	}
+}

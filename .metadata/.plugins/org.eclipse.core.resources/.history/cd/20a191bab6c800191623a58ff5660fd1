@@ -1,0 +1,65 @@
+package thuvienX;
+
+import java.util.Scanner;
+
+public class sachgiaokhoa extends Tusach{
+	// thuộc tính
+	private String sachMoi, sachCu;
+	private float thanhTien;
+
+	// phương thức get, set
+	public String getSachMoi() {
+		return sachMoi;
+	}
+
+	public void setSachMoi(String sachMoi) {
+		this.sachMoi = sachMoi;
+	}
+
+	public String getSachCu() {
+		return sachCu;
+	}
+
+	public void setSachCu(String sachCu) {
+		this.sachCu = sachCu;
+	}
+	
+	public float getThanhTien() {
+		return thanhTien;
+	}
+	public void setThanhTien(float thanhTien) {
+		this.thanhTien = thanhTien;
+	}
+	
+	// hàm khởi tạo
+	public sachgiaokhoa() {
+
+	}
+
+	public sachgiaokhoa(String sachMoi, String sachCu, float thanhTien) {
+		this.sachMoi = sachMoi;
+		this.sachCu = sachCu;
+		this.thanhTien = thanhTien;
+	}
+	// hàm nhập xuất
+	@Override
+	public void nhap(Scanner scan) {
+		super.nhap(scan);
+		System.out.println(" Mời bạn nhập tình trạng sách: ");
+		this.sachCu = scan.nextLine();
+		this.sachMoi = scan.nextLine();
+	}
+	@Override
+	public void xuat() {
+		super.xuat();
+		System.out.println(" thành tiền: ");
+		System.out.println("sách mới: "+ this.thanhTien+"\t"+
+						   "sách cũ: "+ (this.thanhTien*0.5));
+	}
+	
+	// phương thức khác
+	public void thanhTien() {
+		this.thanhTien = this.getSoLuong() * this.getDonGia();
+				
+	}
+}

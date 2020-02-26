@@ -1,0 +1,17 @@
+package thuvienX;
+
+import java.util.Scanner;
+
+public class xuly {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner (System.in);
+		sachgiaokhoa sgk = new sachgiaokhoa();
+		sachthamkhao stk = new sachthamkhao();
+		sgk.nhap(scan);
+		sgk.thanhTien();
+		sgk.xuat();
+		
+	}
+
+}

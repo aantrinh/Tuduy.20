@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class XuLy {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CongTy cty = new CongTy();
+		Scanner scan = new Scanner (System.in);
+		cty.nhapNhanVien(scan);
+		cty.xuatDSNhanVien();
+	}
+
+}

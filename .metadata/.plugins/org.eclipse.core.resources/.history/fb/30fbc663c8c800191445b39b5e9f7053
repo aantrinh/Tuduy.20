@@ -1,0 +1,29 @@
+
+public class NhanVien extends NhanSu {
+	// hằng số
+	public final int LUONG_NGAY = 100;
+	//thuộc tính
+	protected int maTP;
+	public NhanVien() { 
+		// Đưa các giá trị mặc định có trong phương thức này
+		// Khởi tạo các list
+		maTP = -1;
+	}
+	// get,set
+
+	public int getMaTP() {
+		return maTP;
+	}
+
+	public void setMaTP(int maTP) {
+		this.maTP = maTP;
+	}
+	// hàm khởi tạo
+	public NhanVien(int maTP) {
+		this.maTP = maTP;
+	}
+	@Override
+	public NhanVien(int maSo, String hoTen,int soDienThoai, int ngayLamViec, float luongThang ) {
+		super( maSo,  hoTen, soDienThoai,  ngayLamViec,   luongThang )
+	}
+}

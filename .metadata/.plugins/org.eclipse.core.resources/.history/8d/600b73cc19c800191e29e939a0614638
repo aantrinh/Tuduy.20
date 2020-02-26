@@ -1,0 +1,32 @@
+package thuvienX;
+
+public class sachgiaokhoa {
+	// thuộc tính
+private float sachMoi, sachCu;
+	// phương thức get, set
+public float getSachMoi() {
+	return sachMoi;
+}
+
+public void setSachMoi(float sachMoi) {
+	this.sachMoi = sachMoi;
+}
+
+public float getSachCu() {
+	return sachCu;
+}
+
+public void setSachCu(float sachCu) {
+	this.sachCu = sachCu;
+}
+	// hàm khởi tạo
+public sachgiaokhoa() {
+	
+}
+public sachgiaokhoa(float sachMoi, float sachCu) {
+	this.sachMoi = sachMoi;
+	this.sachCu = sachCu;
+}
+	// hàm nhập xuất
+	// phương thức khác
+}

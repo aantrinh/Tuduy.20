@@ -1,0 +1,48 @@
+package thuvienX;
+
+import java.util.Scanner;
+
+public class sachgiaokhoa extends Tusach {
+	// thuộc tính
+	private String tinhTrang;
+	//private float thanhTien;
+
+	// phương thức get, set
+	public String getTinhTrang() {
+		return tinhTrang;
+	}
+	public void setTinhTrang(String tinhTrang) {
+		this.tinhTrang = tinhTrang;
+	}
+	
+	// hàm khởi tạo
+	public sachgiaokhoa() {
+	}
+
+	public sachgiaokhoa(int maSach, float donGia, int soLuong, String nhaXuatBan, String ngayNhap, float thanhTien,String tinhTrang) {
+		super ( maSach,  ngayNhap,  donGia,  soLuong,  nhaXuatBan, thanhTien);
+	}
+
+	// hàm nhập xuất
+	@Override
+	public void nhap(Scanner scan) {
+		System.out.println(" Mời bạn nhập tình trạng sách: ");
+		super.nhap(scan);
+	}
+	@Override 
+	public void tinhthanhtien() {
+		super.tinhthanhtien();
+	}
+	@Override
+	public void xuat() {
+		super.xuat();
+		System.out.println(" Tình trạng: "+ this.tinhTrang+
+						   " Thành tiền: "+ this.thanhTien);
+	}
+
+	// phương thức khác
+	public void thanhTien() {
+		this.thanhTien = this.getSoLuong() * this.getDonGia();
+
+	}
+}

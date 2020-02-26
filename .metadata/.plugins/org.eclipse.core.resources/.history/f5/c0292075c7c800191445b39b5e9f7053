@@ -1,0 +1,21 @@
+
+public class NhanVien extends NhanSu {
+	//thuộc tính
+	protected int maTP;
+	// get,set
+
+	public int getMaTP() {
+		return maTP;
+	}
+
+	public void setMaTP(int maTP) {
+		this.maTP = maTP;
+	}
+	// khởi tạo
+	public NhanVien(int maTP) {
+		this.maTP = maTP;
+	}
+	public NhanVien(int maSo, String hoTen,int soDienThoai, int ngayLamViec, float luongThang ) {
+		super( maSo,  hoTen, soDienThoai,  ngayLamViec,   luongThang )
+	}
+}

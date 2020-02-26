@@ -1,0 +1,45 @@
+
+
+public class NhanVien extends NhanSu {
+	// hằng số
+	public final int LUONG_NGAY = 100;
+	//thuộc tính
+	protected int maTP;
+	public NhanVien() { 
+		// Đưa các giá trị mặc định có trong phương thức này
+		// Khởi tạo các list
+		maTP = -1;
+	}
+	// get,set
+
+	public int getMaTP() {
+		return maTP;
+	}
+
+	public void setMaTP(int maTP) {
+		this.maTP = maTP;
+	}
+	// hàm khởi tạo
+	public NhanVien(int maTP) {
+		this.maTP = maTP;
+	}
+	
+	public NhanVien(int maSo, String hoTen,int soDienThoai, int ngayLamViec, int luong1ngay, float luongThang ) {
+		super(maSo, hoTen, soDienThoai, ngayLamViec, luong1ngay, luongThang);
+	}
+	
+//	public void nhap(Scanner scan) {
+//		super.nhap(scan);
+//		System.out.println("ma truong phong");
+//		this.maTP = Integer.parseInt(scan.nextLine());
+//	}
+	
+	public void xuat() {
+		super.xuat();
+		System.out.println(" Ma Truong phong la"+ this.maTP);
+	}
+	@Override 
+	public void tinhLuong() {
+		this.luongThang = LUONG_NGAY * this.ngayLamViec;
+	}
+}

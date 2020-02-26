@@ -1,0 +1,6 @@
+
+public class NhanVien extends NhanSu {
+	//thuộc tính
+	protected int maTP;
+	protected luong1ngay =100; 
+}

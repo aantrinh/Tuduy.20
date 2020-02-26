@@ -1,0 +1,45 @@
+
+public class TruongPhong extends NhanSu {
+	// thuộc tính
+	protected int soLuongNV;
+	// hằng số
+	public final int LUONG_NGAY = 200;
+	final int PHU_CAP = 100;
+
+	// get, set
+	public int getSoLuongNV() {
+		return soLuongNV;
+	}
+
+	public void setSoLuongNV(int soLuongNV) {
+		this.soLuongNV = soLuongNV;
+	}
+
+	// khởi tạo
+	public TruongPhong() {
+		this.soLuongNV = 0;
+	}
+
+	// xuat
+	public void xuat() {
+		super.xuat();
+		System.out.println(" số lượng nhân viên: " + this.soLuongNV + " lương ngày: " + LUONG_NGAY + " lương tháng: "
+				+ this.luongThang);
+	}
+
+	// tính lương
+	@Override
+	public void tinhLuong() {
+		this.luongThang = LUONG_NGAY * this.ngayLamViec + PHU_CAP * this.soLuongNV;
+	}
+
+	// tăng thêm
+	public void tangsoluongNV() {
+		this.soLuongNV ++;
+	}
+
+	// giảm bớt
+	public void giamsoluongNV() {
+		this.soLuongNV--;
+	}
+}

@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class Sep extends NhanSu {
+// thuộc tính
+	private float soCoPhan;
+	private float thuNhap;
+// hằng số
+	final int LUONG_NGAY = 300;
+
+// get, set
+	public float getSoCoPhan() {
+		return soCoPhan;
+	}
+
+	public void setSoCoPhan(float soCoPhan) {
+		this.soCoPhan = soCoPhan;
+	}
+	
+
+public float getThuNhap() {
+		return thuNhap;
+	}
+
+	public void setThuNhap(float thuNhap) {
+		this.thuNhap = thuNhap;
+	}
+
+	// khởi tạo
+	public Sep() {
+		this.soCoPhan = 0;
+		this.thuNhap =0;
+	}
+
+// nhap, xuat
+	public void nhap(Scanner scan) {
+		super.nhap(scan);
+		System.out.println(" Vui lòng nhập số cổ phần: ");
+		this.soCoPhan = Float.parseFloat(scan.nextLine());
+	}
+
+	public void xuat() {
+		super.xuat();
+		System.out.println(" Phần trăm số cổ phần là: "+ this.soCoPhan+ 
+						   " lương ngày là: "+ LUONG_NGAY + 
+						   " lương tháng: "+ this.luongThang);
+	}
+	public void tinhLuong() {
+		this.luongThang = LUONG_NGAY* this.ngayLamViec;
+	}
+}
